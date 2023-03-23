@@ -1,38 +1,328 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  height: 100%;
+  /* width: 100vw; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  background-size: cover;
+  margin: 0;
+  background: linear-gradient(141deg,#fa0a62 0,#f14668 71%,#f7595f 100%) no-repeat center center fixed;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main {
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  /* display: none; */
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  color: #fff;
+}
+
+h2 {
+  font-size: 20pt;
+  margin: 6pt 0;
+}
+
+h3 {
+  font-size: 18pt;
+  margin: 6pt 0;
+}
+
+button {
+  margin-top: 20pt;
+  font-family: 'Open Sans', Roboto, 'Helvetica Neue', sans-serif;
+  font-size: 20pt;
+  padding: 8pt;
+  border-radius: 4pt;
+  background-image: linear-gradient(141deg,#27BA98 0,#23a971 100%);
+  border: none;
+  font-weight: 800;
+  color: #fff;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  transition: filter 0.2s ease-in-out;
+}
+
+a {
+  color: white;
+  text-decoration-thickness: 1px;
+}
+
+button:hover, button:focus {
+  filter: brightness(90%);
+}
+
+#banner {
+  margin-top: 3em;
+  text-align: center;
+  margin-bottom: 5vh;
+}
+
+#screenSelect {
+  position: absolute;
+  top: 0.75em;
+  left: 1em;
+  font-size: 1.5vw;
+  border: 1px solid white;
+  color: white;
+  border-radius: 8px;
+  border-color: white;
+  height: 2em;
+  font-family: 'Open Sans', Roboto, 'Helvetica Neue', sans-serif;
+  cursor: pointer;
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 0;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+#screenSelect li {
+  font-size: inherit;
+  list-style-type: none;
+  padding: 0;
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  background-color: #fa0a62;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+#screenSelect li a:hover, #screenSelect li a:focus {
+  background-color: #f14668;
+}
+
+#screenSelect li a {
+  font-size: inherit;
+  height: 100%;
+  padding: 0.2em 0.4em;
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#edit {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  font-size: 20pt;
+  border-radius: 0.3em;
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  width: 1.4em;
+  height: 1.4em;
+  vertical-align: baseline;
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#edit:hover, #edit:focus {
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#edit i {
+  vertical-align: baseline;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+#edit i::before {
+  margin: 0;
+  vertical-align: middle;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin: 0 auto;
+  text-align: center;
+  font-style: italic;
+}
+
+#countdown-content {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 5vh;
+}
+
+#countdown-content * {
+  margin: 0;
+}
+
+#countdown-content h2 {
+  font-size: 80pt;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+#countdown-event {
+  font-size: 20pt;
+  height: 10vh;
+  font-weight: 700;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#events {
+  position: absolute;
+  bottom: 8vh;
+  display: flex;
+  flex-flow: row wrap;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+}
+
+.sep {
+  flex-grow: 1;
+}
+
+#events div {
+  width: 25%;
+}
+
+section h2 {
+  margin: 0.5em auto;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  color: white;
+  font-weight: 600;
+  font-size: 16pt;
+  table-layout: fixed;
+}
+
+.scrollableTable {
+  overflow: auto;
+  max-height: 70vh;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+
+.scrollableTable thead th { 
+  position: sticky; top: 0; z-index: 1;
+  border-bottom: 1.5px solid white;
+}
+
+table thead th {
+  background-color: #e8085a;
+}
+
+tr button{
+  transition: background-color 0.2s ease-in-out;
+}
+
+tr:hover {
+  background-color: #ffffff22;
+}
+
+tr {
+  width: 100%;
+}
+
+thead,tbody{
+  width: 100%;
+  overflow-y: auto;
+}
+
+.highlighted, a.active, a.active:active, a.active:focus {
+  background-color: #ac124aa0 !important;
+  color: white !important;
+  font-weight: 800 !important;
+}
+
+.highlighted:hover, a.active:hover {
+  background-color: #ac124a !important;
+}
+
+th, td {
+  padding: 0.35em;
+}
+
+#timetable th, #timetable td {
+  width: 80%;
+}
+
+#teamtable th, #teamtable td {
+  width: 70%;
+}
+
+tr *:first-child {
+  border-right: 1px solid white;
+}
+
+#timetable tr *:first-child {
+  width: 20%;
+}
+
+#teamtable tr *:first-child {
+  width: 30%;
+}
+
+tr td {
+  border-top: 1px solid white;
+}
+
+#awards-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 70vh;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#awards-container div {
+  min-width: 500px;
+  flex-grow: 1;
+  flex-basis:500px;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#awards-container div img {
+  background-color: white;
+  padding: 10px;
+  aspect-ratio: 16/9;
+  border-radius: 5px;
+  height: 60%;
+  object-position: 50% 50%;
+  object-fit: contain;
+  box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.25);
+  user-select: none;
 }
