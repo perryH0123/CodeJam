@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import MainView from './Routes/main';
 import Awards from './Routes/awards';
 import Schedule from './Routes/schedule';
@@ -19,7 +19,8 @@ root.render(
             <Route path="schedule" element={<Schedule />} />
             <Route path="teams" element={<Teams />} />
             <Route path="awards" element={<Awards />} />
-            <Route path="*" element={<MainView />} />
+            <Route path="" element={<MainView />} />
+            <Route path="*" element={<Navigate to=""/>} />
           </Route>
       </Routes>
     </BrowserRouter>
