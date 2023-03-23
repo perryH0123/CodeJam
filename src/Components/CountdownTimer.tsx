@@ -14,8 +14,9 @@ const CountdownTimer = (props: {countTo?: ScheduleEvent | null, tick: number}) =
             if(timeDiff < 0) setCountdownTime("00:00");
             else {
                 const seconds = Math.floor(timeDiff / 1000);
-                const minutes = Math.floor(seconds / 60);
-                setCountdownTime(`${minutes.toString().padStart(2, "0")}:${(seconds % 60).toString().padStart(2, "0")}`)
+                const minutes = Math.floor(seconds / 60 % 60);
+                const hours = Math.floor(seconds / 3600);
+                setCountdownTime(`${hours > 0 ? `${hours.toString().padStart(2,"0")}:` : ""}${minutes.toString().padStart(2, "0")}:${(seconds % 60).toString().padStart(2, "0")}`)
             }
         }
     }
