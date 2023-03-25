@@ -38,12 +38,12 @@ const MainView = () => {
     )
     if (currentEventIndex > -2) return (<main>
           <div id="countdown-content">
-              <CountdownTimer countTo={nextEvent} tick={tick}/>
+              <CountdownTimer countTo={nextEvent} tick={tick}/>~
               {schedule && <div id="countdown-event">
                   <h3 id="current-label">Now happening:</h3>
                   {schedule.length>0 && typeof currentEventIndex === "number"  && schedule[currentEventIndex] && <h3 id="current-event">{currentEventIndex === schedule.length-1 || !schedule ? "Thank you for coming to Code Jam 2023!" : `${new Date(schedule[currentEventIndex].time).toLocaleTimeString().replace(/(.*)\D\d+/, '$1')} - ${schedule[currentEventIndex].name}`}</h3>}
               </div>}
-              {submissionsOpen && <button id="submit">Submit Project</button>}
+              {submissionsOpen && <a id="submit" href="https://abc-code-jam-2023.devpost.com/">Submit Project</a>}
           </div>
           <div id="events">
               <div id="previous">
