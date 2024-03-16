@@ -31,8 +31,8 @@ const MainView = () => {
     }, [schedule]);
     if(schedule && schedule.length && Date.now() >= schedule[schedule.length-1].time.valueOf()) return (
     <div id="countdown-content">
-        <h1>Code Jam 2023 has ended!</h1>
-        <h4>Thank you for coming to Code Jam 2023! We hope you enjoyed the event, and we hope to see you at Code Jam 2024!</h4>
+        <h1>Code Jam 2024 has ended!</h1>
+        <h4>Thank you for coming to Code Jam 2024! We hope you enjoyed the event, and we hope to see you at Code Jam 2025!</h4>
         <h4><Link to="awards">Awards</Link></h4>
     </div>
     )
@@ -41,9 +41,9 @@ const MainView = () => {
               <CountdownTimer countTo={nextEvent} tick={tick}/>
               {schedule && <div id="countdown-event">
                   <h3 id="current-label">Now happening:</h3>
-                  {schedule.length>0 && typeof currentEventIndex === "number"  && schedule[currentEventIndex] && <h3 id="current-event">{currentEventIndex === schedule.length-1 || !schedule ? "Thank you for coming to Code Jam 2023!" : `${new Date(schedule[currentEventIndex].time).toLocaleTimeString().replace(/(.*)\D\d+/, '$1')} - ${schedule[currentEventIndex].name}`}</h3>}
+                  {schedule.length>0 && typeof currentEventIndex === "number"  && schedule[currentEventIndex] && <h3 id="current-event">{currentEventIndex === schedule.length-1 || !schedule ? "Thank you for coming to Code Jam 2024!" : `${new Date(schedule[currentEventIndex].time).toLocaleTimeString().replace(/(.*)\D\d+/, '$1')} - ${schedule[currentEventIndex].name}`}</h3>}
               </div>}
-              {submissionsOpen && <a id="submit" href="https://abc-code-jam-2023.devpost.com/">Submit Project</a>}
+              {submissionsOpen && <a id="submit" href="https://abc-code-jam-2024.devpost.com/">Submit Project</a>}
           </div>
           <div id="events">
               <div id="previous">
