@@ -46,8 +46,9 @@ function App() {
       <div id="banner">
         <h1>Code Jam 2024</h1>
         <h2>Dashboard</h2>
-        <h3><Link to="https://drive.google.com/drive/folders/1fTmOw8xfpFoMGZIaql2peYB0Iq0zzzs7?usp=sharing" target="_blank">Submission Tutorial Videos</Link></h3>
-        <h3>Submissions will open at 5:15 PT</h3></div>
+        <div id="submissionsGuide">
+        <h3><Link to="https://drive.google.com/drive/folders/1fTmOw8xfpFoMGZIaql2peYB0Iq0zzzs7?usp=sharing" target="_blank">Click Here for Submission Tutorial Videos</Link></h3>
+        <h3>Submissions will open at 5:15 PT</h3></div></div>
       <a href="https://docs.google.com/spreadsheets/d/1zYlF5b4yPZolKSg63H--swc-sVNpfCL7hwm-wdYj6V8/edit?usp=sharing" id="edit">
           <BsFillGearFill className="bi bi-gear"/>
       </a>

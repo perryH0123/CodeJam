@@ -67,6 +67,15 @@ button:hover, button:focus {
   margin-bottom: 5vh;
 }
 
+#submissionsGuide {
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 5vh;
+  background-color: #5f0057;
+  width: 50%;
+
+}
 
 
 #screenSelect {
