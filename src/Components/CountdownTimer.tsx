@@ -10,7 +10,7 @@ const CountdownTimer = (props: {countTo?: ScheduleEvent | null, tick: number}) =
         if(!countTo.countdownToNext) setCountdownTime("00:00");
         else {
             const now = new Date();
-            const timeDiff = new Date(countTo.time).geTime() - now.getTime();
+            const timeDiff = new Date(countTo.time).getTime() - now.getTime();
             if(timeDiff < 0) setCountdownTime("00:00");
             else {
                 const seconds = Math.floor(timeDiff / 1000);
