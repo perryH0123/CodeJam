@@ -43,7 +43,7 @@ function App() {
   return (
     <div className="App">
       <div id="banner">
-        <h1>Code Jam 2023</h1>
+        <h1>Code Jam 2024</h1>
         <h2>Dashboard</h2>
       </div>
       <a href="https://docs.google.com/spreadsheets/d/1zYlF5b4yPZolKSg63H--swc-sVNpfCL7hwm-wdYj6V8/edit?usp=sharing" id="edit">
