@@ -74,6 +74,7 @@ button:hover, button:focus {
   margin-bottom: 5vh;
   background-color: #5f0057;
   width: 50%;
+  border-radius: 25px;
 
 }
 
