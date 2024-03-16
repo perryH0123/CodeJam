@@ -7,7 +7,7 @@ const Teams = () => {
         const fetchData = async () => {
             let rawTeams: Team[] = [];
             try {
-                const payload = await fetch("https://script.google.com/macros/s/AKfycbwerNySy4RSFSEWjlfc-XEf2osLhq7KLUr6ro-ajBM8Y76qg-Kk_hyjzsSYPTIBhgSVzA/exec", {
+                const payload = await fetch("https://script.google.com/macros/s/14rRnSaW8tqm7KOWt_XF7QyrhqKCT8ZGyeP1dMHRAieDsZ-Jr-V2eQ-jH/exec", {
                     method: "GET",
                 });
                 rawTeams = await payload.json() as Team[];
