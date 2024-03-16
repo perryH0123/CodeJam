@@ -5,6 +5,7 @@ import {Outlet, NavLink, useOutletContext} from 'react-router-dom';
 import './App.css';
 import ScheduleEvent from './Models/ScheduleEvent';
 import Award from './Models/Award';
+import { Link } from 'react-router-dom';
 
 interface DataPayload {
   submissionsOpen: boolean;
@@ -45,7 +46,8 @@ function App() {
       <div id="banner">
         <h1>Code Jam 2024</h1>
         <h2>Dashboard</h2>
-      </div>
+        <h3><Link to="https://drive.google.com/drive/folders/1fTmOw8xfpFoMGZIaql2peYB0Iq0zzzs7?usp=sharing" target="_blank">Submission Tutorial Videos</Link></h3>
+        <h3>Submissions will open at 5:15 PT</h3></div>
       <a href="https://docs.google.com/spreadsheets/d/1zYlF5b4yPZolKSg63H--swc-sVNpfCL7hwm-wdYj6V8/edit?usp=sharing" id="edit">
           <BsFillGearFill className="bi bi-gear"/>
       </a>
