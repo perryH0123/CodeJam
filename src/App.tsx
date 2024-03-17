@@ -47,9 +47,8 @@ function App() {
         <h1>Code Jam 2024</h1>
         <h2>Dashboard</h2>
         <div id="submissionsGuide">
-        <h4><Link to="https://drive.google.com/drive/folders/1fTmOw8xfpFoMGZIaql2peYB0Iq0zzzs7?usp=sharing" target="_blank">Click Here for Submission Tutorial Videos</Link></h4>
-        <h2>Submissions ARE OPEN: Will CLOSE at 6:00 PM</h2>
-        <h4><strong><i>Click the <u>green "Submit Project"</u>  button below to submit your project.</i></strong></h4></div></div>
+        <h4><Link to="https://drive.google.com/drive/folders/1fTmOw8xfpFoMGZIaql2peYB0Iq0zzzs7?usp=sharing" target="_blank">Click Here for Submission Tutorial Videos <br></br> Click the green button below to submit your project!</Link></h4>
+</div></div>
       <a href="https://docs.google.com/spreadsheets/d/1zYlF5b4yPZolKSg63H--swc-sVNpfCL7hwm-wdYj6V8/edit?usp=sharing" id="edit">
           <BsFillGearFill className="bi bi-gear"/>
       </a>
