@@ -43,7 +43,7 @@ const MainView = () => {
                   <h3 id="current-label">Now happening:</h3>
                   {schedule.length>0 && typeof currentEventIndex === "number"  && schedule[currentEventIndex] && <h3 id="current-event">{currentEventIndex === schedule.length-1 || !schedule ? "Thank you for coming to Code Jam 2024!" : `${new Date(schedule[currentEventIndex].time).toLocaleTimeString().replace(/(.*)\D\d+/, '$1')} - ${schedule[currentEventIndex].name}`}</h3>}
               </div>}
-              {submissionsOpen && <a id="submit" href="https://docs.google.com/forms/d/e/1FAIpQLSdud400C8IwRfd3XdmsFYpSPraquW3jyl7UhusurYwWkWn3CA/viewform/">Submit Project</a>}
+              {submissionsOpen && <a id="submit" href="https://forms.gle/X3YyC2FQmbhrDtdq9">Submit Project</a>}
           </div>
           <div id="events">
               <div id="previous">
