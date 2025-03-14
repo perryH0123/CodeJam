@@ -339,3 +339,365 @@ tr td {
   box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.25);
   user-select: none;
 }
+
+/* Judge Login Styles */
+.judge-login {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.judge-login h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.error {
+    color: #ff4444;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Judge Dashboard Styles */
+.judge-dashboard {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.logout-btn {
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+.notes-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.note-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.note-card h4 {
+    margin: 0 0 0.5rem 0;
+}
+
+.note-card small {
+    display: block;
+    margin-top: 0.5rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+button {
+    background: linear-gradient(141deg,#27BA98 0,#23a971 100%);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    filter: brightness(110%);
+}
+
+/* Awards Section Styles */
+.awards-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.award-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.award-item h4 {
+    margin: 0 0 0.5rem 0;
+    color: white;
+}
+
+.publish-btn {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    font-size: 1.1em;
+}
+
+.publish-btn:disabled {
+    background: rgba(255, 255, 255, 0.1);
+    cursor: not-allowed;
+}
+
+/* Footer Styles */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.footer a:hover {
+    opacity: 1;
+}
+
+/* Rubric Evaluation Styles */
+.rubric-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.team-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.team-evaluation-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.team-info {
+    flex: 1;
+}
+
+.team-info h4 {
+    margin: 0 0 0.5rem 0;
+}
+
+.team-info p {
+    margin: 0;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+.evaluation-score {
+    color: #27BA98;
+    font-weight: bold;
+    margin-top: 0.5rem !important;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: linear-gradient(141deg,#fa0a62 0,#f14668 71%,#f7595f 100%);
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.rubric-evaluation {
+    color: white;
+}
+
+.rubric-section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.rubric-section h4 {
+    margin: 0 0 1rem 0;
+    color: white;
+}
+
+.total-score {
+    text-align: center;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.total-score h4 {
+    margin: 0;
+    color: #27BA98;
+    font-size: 1.2em;
+}
+
+/* Rubric Description Styles */
+.rubric-instructions {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+}
+
+.rubric-instructions ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.rubric-instructions li {
+    color: white;
+    margin: 0.25rem 0;
+}
+
+.section-description {
+    color: rgba(255, 255, 255, 0.8);
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.score-select {
+    position: relative;
+}
+
+.score-descriptions {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin-left: 1rem;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem;
+    border-radius: 4px;
+    width: 300px;
+    z-index: 10;
+}
+
+.score-select:hover .score-descriptions,
+.score-select:focus-within .score-descriptions {
+    display: block;
+}
+
+.score-description {
+    color: white;
+    margin: 0.5rem 0;
+    font-size: 0.9em;
+}
+
+.score-description strong {
+    color: #27BA98;
+}
+
+.deduction-guide {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 1rem;
+}
+
+.deduction-guide li {
+    color: white;
+    margin: 0.25rem 0;
+    font-size: 0.9em;
+}

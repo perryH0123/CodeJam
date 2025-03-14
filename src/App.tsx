@@ -5,19 +5,21 @@ import {Outlet, NavLink, useOutletContext} from 'react-router-dom';
 import './App.css';
 import ScheduleEvent from './Models/ScheduleEvent';
 import Award from './Models/Award';
-import { Link } from 'react-router-dom';
+import Team from './Models/Team';
+import { JudgeProvider } from './context/JudgeContext';
 
 interface DataPayload {
   submissionsOpen: boolean;
   schedule: ScheduleEvent[];
   awards: Award[];
+  teams: Team[];
 }
 
 export const CurrentEventIndexContext = React.createContext(0)
 export const UpdateTimeContext = React.createContext(() => {})
 
 function App() {
-  const [payload, setPayload] = React.useState<DataPayload>({schedule: [],submissionsOpen: false, awards: []} as DataPayload);
+  const [payload, setPayload] = React.useState<DataPayload>({schedule: [],submissionsOpen: false, awards: [], teams: []} as DataPayload);
 
   
   const fetchData = async () => {
@@ -42,25 +44,30 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-      <div id="banner">
-        <h1>Code Jam 2024</h1>
-        <h2>Dashboard</h2>
-        {/* <div id="submissionsGuide">
-        <h4><Link to="https://drive.google.com/drive/folders/1fTmOw8xfpFoMGZIaql2peYB0Iq0zzzs7?usp=sharing" target="_blank">Click Here for Submission Tutorial Videos</Link><br></br> <i>Click the green button below to submit your project!</i></h4>
-</div> */}
-</div>
-      <a href="https://docs.google.com/spreadsheets/d/1zYlF5b4yPZolKSg63H--swc-sVNpfCL7hwm-wdYj6V8/edit?usp=sharing" id="edit">
+    <JudgeProvider>
+      <div className="App">
+        <div id="banner">
+          <h1>Code Jam 2025</h1>
+          <h2>Dashboard</h2>
+          {/* <div id="submissionsGuide">
+          <h4><Link to="https://drive.google.com/drive/folders/1fTmOw8xfpFoMGZIaql2peYB0Iq0zzzs7?usp=sharing" target="_blank">Click Here for Submission Tutorial Videos</Link><br></br> <i>Click the green button below to submit your project!</i></h4>
+      </div> */}
+        </div>
+        <a href="https://docs.google.com/spreadsheets/d/1zYlF5b4yPZolKSg63H--swc-sVNpfCL7hwm-wdYj6V8/edit?usp=sharing" id="edit">
           <BsFillGearFill className="bi bi-gear"/>
-      </a>
-      <ul id="screenSelect">
+        </a>
+        <ul id="screenSelect">
           <li><NavLink to="">Main Display</NavLink></li>
           <li><NavLink to="schedule">Schedule</NavLink></li>
           <li><NavLink to="teams">Teams</NavLink></li>
           <li><NavLink to="awards">Awards</NavLink></li>
-      </ul>
+        </ul>
         <Outlet context={payload}/>
-    </div>
+        <footer className="footer">
+          <NavLink to="judge/login">Judge Login</NavLink>
+        </footer>
+      </div>
+    </JudgeProvider>
   );
 }
 
