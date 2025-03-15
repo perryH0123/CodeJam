@@ -25,7 +25,7 @@ const Awards = () => {
                 <img src={awards[2]?.img || DefaultImage} alt=""/>
                 <h3>{awards[2].team}</h3>
             </div>}
-            {awards.length > 3 && awards[3] && <div id="honorable">
+            {awards.length > 3 && awards[3] && <div id="boards">
                 <h2>Board's Choice</h2>
                 <img src={awards[3]?.img || DefaultImage} alt=""/>
                 <h3>{awards[3].team}</h3>
