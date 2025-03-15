@@ -47,7 +47,7 @@ function App() {
     <JudgeProvider>
       <div className="App">
         <div id="banner">
-          <h1>Code Jam 2025</h1>
+          <h1>CTE Code Jam 2025</h1>
           <h2>Dashboard</h2>
           {/* <div id="submissionsGuide">
           <h4><Link to="https://drive.google.com/drive/folders/1fTmOw8xfpFoMGZIaql2peYB0Iq0zzzs7?usp=sharing" target="_blank">Click Here for Submission Tutorial Videos</Link><br></br> <i>Click the green button below to submit your project!</i></h4>
