@@ -29,7 +29,7 @@ const Schedule = () => {
     <section id="schedule">
     <h2>Schedule</h2>
     <div className="scrollableTable">
-        <table id="timetable">
+        <table id="timetable" style={{marginBottom: "2rem"}}>
             <thead>
                 <tr>
                     <th>Time</th>
