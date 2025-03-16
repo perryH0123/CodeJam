@@ -31,8 +31,8 @@ const MainView = () => {
     }, [schedule]);
     if(schedule && schedule.length && Date.now() >= schedule[schedule.length-1].time.valueOf()) return (
     <div id="countdown-content">
-        <h1>Code Jam 2024 has ended!</h1>
-        <h4>Thank you for coming to Code Jam 2024! We hope you enjoyed the event, and we hope to see you at Code Jam 2025!</h4>
+        <h1>Code Jam 2025 has ended!</h1>
+        <h4>Thank you for coming to Code Jam 2025! We hope you enjoyed the event, and we hope to see you at Code Jam 2026!</h4>
         <h4><Link to="awards">Awards</Link></h4>
     </div>
     )
